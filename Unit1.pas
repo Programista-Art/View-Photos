@@ -60,8 +60,8 @@ procedure TForm1.de(Sender: TObject);
 begin
 
   //FileListBox1.Mask := '.bmp';
-   DirectoryListBox1.Directory := 'c:\';
-  //DirectoryListBox1.Directory := 'C:\Users\Programista Art\Desktop\';
+   //DirectoryListBox1.Directory := 'c:\';
+  DirectoryListBox1.Directory := 'C:\Users\Programista Art\Desktop\sddd\';
   ListView1.ViewStyle := vsIcon;
   ListView1.IconOptions.AutoArrange := True;
   ListView1.LargeImages := ImageList1;

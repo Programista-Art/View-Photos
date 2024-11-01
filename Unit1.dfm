@@ -51,8 +51,6 @@ object Form1: TForm1
       Columns = <>
       TabOrder = 0
       OnClick = ListView1Click
-      ExplicitWidth = 285
-      ExplicitHeight = 286
     end
   end
   object PanelTop: TPanel
@@ -62,7 +60,6 @@ object Form1: TForm1
     Height = 179
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 235
     object DirectoryListBox1: TDirectoryListBox
       Left = 1
       Top = 1
@@ -71,7 +68,6 @@ object Form1: TForm1
       Align = alLeft
       FileList = FileListBox1
       TabOrder = 0
-      ExplicitHeight = 233
     end
     object FileListBox1: TFileListBox
       Left = 289
@@ -83,8 +79,6 @@ object Form1: TForm1
       Mask = #39'*.jpg;*.jpeg;*.png;*.bmp'#39
       TabOrder = 1
       OnChange = FileListBox1Change
-      ExplicitWidth = 285
-      ExplicitHeight = 233
     end
   end
   object PanelTopBottom: TPanel
@@ -94,7 +88,6 @@ object Form1: TForm1
     Height = 25
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 575
     object ButtonStart: TButton
       Left = 894
       Top = 1
@@ -104,7 +97,6 @@ object Form1: TForm1
       Caption = 'Start'
       TabOrder = 0
       OnClick = ButtonStartClick
-      ExplicitLeft = 499
     end
   end
   object ImageList1: TImageList
