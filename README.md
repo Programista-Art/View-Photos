@@ -1,2 +1,1 @@
-# ImageWiever
-Przeglądarka zdjęć.
+Przeglądarka zdjęć w Delphi 12
