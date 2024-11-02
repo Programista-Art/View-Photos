@@ -53,10 +53,6 @@ object Form1: TForm1
         Align = alClient
         Caption = 'PanelMain'
         TabOrder = 0
-        ExplicitLeft = -8
-        ExplicitTop = 97
-        ExplicitWidth = 975
-        ExplicitHeight = 345
         object PanelLeft: TPanel
           Left = 1
           Top = 1
@@ -64,7 +60,6 @@ object Form1: TForm1
           Height = 433
           Align = alLeft
           TabOrder = 0
-          ExplicitHeight = 287
           object DirectoryListBox1: TDirectoryListBox
             Left = 1
             Top = 29
@@ -73,7 +68,6 @@ object Form1: TForm1
             Align = alClient
             FileList = FileListBox1
             TabOrder = 0
-            ExplicitHeight = 257
           end
           object PanelTopPath: TPanel
             AlignWithMargins = True
@@ -129,8 +123,6 @@ object Form1: TForm1
           Height = 433
           Align = alRight
           TabOrder = 1
-          ExplicitLeft = 744
-          ExplicitHeight = 287
           object Image1: TImage
             Left = 1
             Top = 1
@@ -147,8 +139,6 @@ object Form1: TForm1
           Height = 433
           Align = alClient
           TabOrder = 2
-          ExplicitWidth = 574
-          ExplicitHeight = 287
           object ListView1: TListView
             Left = 1
             Top = 1
@@ -158,8 +148,6 @@ object Form1: TForm1
             Columns = <>
             TabOrder = 0
             OnClick = ListView1Click
-            ExplicitWidth = 572
-            ExplicitHeight = 285
           end
         end
         object FileListBox1: TFileListBox
@@ -172,8 +160,6 @@ object Form1: TForm1
           Mask = #39'*.jpg;*.jpeg;*.png;*.bmp'#39
           TabOrder = 3
           OnChange = FileListBox1Change
-          ExplicitTop = 288
-          ExplicitWidth = 973
         end
       end
     end
@@ -203,9 +189,6 @@ object Form1: TForm1
         Height = 491
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 191
-        ExplicitTop = -2
-        ExplicitWidth = 782
         object RichEdit1: TRichEdit
           Left = 1
           Top = 1
@@ -231,10 +214,6 @@ object Form1: TForm1
           ReadOnly = True
           ShowURLHint = True
           TabOrder = 0
-          ExplicitLeft = 216
-          ExplicitTop = 264
-          ExplicitWidth = 185
-          ExplicitHeight = 89
         end
       end
       object PanelLewy: TPanel

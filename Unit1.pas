@@ -81,26 +81,20 @@ end;
 
 procedure TForm1.de(Sender: TObject);
 begin
-
-  //FileListBox1.Mask := '.bmp';
-   //DirectoryListBox1.Directory := 'c:\';
-  DirectoryListBox1.Directory := 'C:\Users\Programista Art\Desktop\sddd\';
+  DirectoryListBox1.Directory := 'c:\';
+  //DirectoryListBox1.Directory := 'C:\Users\Programista Art\Desktop\sddd\';
   ListView1.ViewStyle := vsIcon;
   ListView1.IconOptions.AutoArrange := True;
   ListView1.LargeImages := ImageList1;
-
   FileListBox1.Mask := '*.jpg;*.jpeg;*.png;*.bmp';
-
   Image1.Stretch := True;
   Image1.Proportional := True;
   Image1.Center := True;
 end;
 
-
-
 procedure TForm1.FileListBox1Change(Sender: TObject);
 begin
-Start;
+  Start;
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -129,11 +123,8 @@ end;
 procedure TForm1.ListView1Click(Sender: TObject);
 var
   SelectedItem: TListItem;
-//  FullPath: string;
   Picture: TPicture;
 begin
- // Image1.Picture.LoadFromFile(DirectoryListBox1.Directory + '\' + FileListBox1.Items[ListView1.ItemIndex]);
-if ListView1.Selected <> nil then
   begin
     SelectedItem := ListView1.Selected;
     FullPath := string(PChar(SelectedItem.Data));
@@ -210,10 +201,8 @@ begin
  if SelectDirectory('Wybierz katalog','',aPath) then
   begin
     DirectoryListBox1.Directory := aPath;
-    Caption := 'Przegl¹darka obrazów - ' + aPath;
+    Caption := 'Image Flex Converter - ' + aPath;
   end;
-
-
 end;
 
 procedure TForm1.Start;
