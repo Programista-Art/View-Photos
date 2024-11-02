@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.696,C:\Users\Programista Art\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.615,C:\Users\Programista Art\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.615,C:\Users\Programista Art\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.696,D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Project1.dproj=C:\Users\Programista Art\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.989,=D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.615,D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Unit1.dfm=C:\Users\Programista Art\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.817,=C:\Users\Programista Art\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024.11.01 20:51:53.989,=D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.615,D:\Programowanie na Delphi\Delphi projekty\2024\Pazdziernik 2024\prosmotr-miniatiur\Unit1.pas=C:\Users\Programista Art\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

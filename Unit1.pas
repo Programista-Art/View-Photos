@@ -11,19 +11,23 @@ uses
 type
   TForm1 = class(TForm)
     ImageList1: TImageList;
-    PanelDolny: TPanel;
-    ListView1: TListView;
-    Image1: TImage;
-    PanelTop: TPanel;
-    DirectoryListBox1: TDirectoryListBox;
-    FileListBox1: TFileListBox;
-    PanelTopBottom: TPanel;
+    PanelTopMenu: TPanel;
     ButtonStart: TButton;
     Splitter1: TSplitter;
     MainMenu: TMainMenu;
     Plik1: TMenuItem;
     OpenFolder: TMenuItem;
     OPD: TOpenDialog;
+    EditPath: TEdit;
+    Label1: TLabel;
+    PanelMain: TPanel;
+    PanelLeft: TPanel;
+    DirectoryListBox1: TDirectoryListBox;
+    PanelRight: TPanel;
+    Image1: TImage;
+    PanelTop: TPanel;
+    FileListBox1: TFileListBox;
+    ListView1: TListView;
     procedure de(Sender: TObject);
     procedure ButtonStartClick(Sender: TObject);
     procedure ListView1Click(Sender: TObject);
@@ -53,7 +57,8 @@ uses Unit2;
 
 procedure TForm1.ButtonStartClick(Sender: TObject);
 begin
-Start;
+//Start;
+  DirectoryListBox1.Directory := EditPath.Text;
 end;
 
 procedure TForm1.de(Sender: TObject);
