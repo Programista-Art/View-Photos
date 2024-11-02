@@ -34,60 +34,24 @@ object FormPictureView: TFormPictureView
       TabOrder = 0
       OnClick = Button1Click
     end
-    object ButtPlus: TButton
-      Left = 424
-      Top = 1
-      Width = 45
-      Height = 23
-      Align = alRight
-      Caption = '+'
-      TabOrder = 1
-      OnClick = ButtPlusClick
-    end
-    object ButtMinus: TButton
-      Left = 384
-      Top = 1
-      Width = 40
-      Height = 23
-      Align = alRight
-      Caption = '-'
-      TabOrder = 2
-      OnClick = ButtMinusClick
-    end
-    object TrackBar1: TTrackBar
-      Left = 1
-      Top = 1
-      Width = 383
-      Height = 23
-      Align = alClient
-      Max = 10000
-      Frequency = 100
-      TabOrder = 3
-      OnChange = TrackBar1Change
-      OnKeyDown = TrackBar1KeyDown
-      OnKeyUp = TrackBar1KeyUp
-      ExplicitWidth = 272
-    end
   end
   object ScrollBox1: TScrollBox
     Left = 0
     Top = 0
     Width = 545
-    Height = 416
+    Height = 383
     HorzScrollBar.ButtonSize = 5
     HorzScrollBar.Tracking = True
     Align = alClient
     TabOrder = 1
     UseWheelForScrolling = True
-    ExplicitLeft = 200
-    ExplicitTop = 96
-    ExplicitWidth = 185
-    ExplicitHeight = 297
+    ExplicitWidth = 401
+    ExplicitHeight = 289
     object ImageViewer: TImage
-      Left = 23
-      Top = 22
-      Width = 498
-      Height = 369
+      Left = 20
+      Top = 20
+      Width = 468
+      Height = 371
       Margins.Left = 20
       Margins.Top = 20
       Margins.Right = 20
@@ -98,6 +62,30 @@ object FormPictureView: TFormPictureView
       OnMouseDown = ImageViewerMouseDown
       OnMouseMove = ImageViewerMouseMove
       OnMouseUp = ImageViewerMouseUp
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 383
+    Width = 545
+    Height = 33
+    Align = alBottom
+    TabOrder = 2
+    object TrackBar1: TTrackBar
+      Left = 1
+      Top = 1
+      Width = 543
+      Height = 31
+      Align = alClient
+      Max = 10000
+      Frequency = 100
+      PositionToolTip = ptRight
+      TabOrder = 0
+      OnChange = TrackBar1Change
+      OnKeyDown = TrackBar1KeyDown
+      OnKeyUp = TrackBar1KeyUp
+      ExplicitLeft = 41
+      ExplicitTop = 9
     end
   end
 end

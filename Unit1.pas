@@ -12,22 +12,37 @@ type
   TForm1 = class(TForm)
     ImageList1: TImageList;
     PanelTopMenu: TPanel;
-    ButtonStart: TButton;
     Splitter1: TSplitter;
     MainMenu: TMainMenu;
     Plik1: TMenuItem;
     OpenFolder: TMenuItem;
     OPD: TOpenDialog;
-    EditPath: TEdit;
-    Label1: TLabel;
+    PopupMenuEdit: TPopupMenu;
+    Kopiuj1: TMenuItem;
+    Wklej1: TMenuItem;
+    Usu1: TMenuItem;
+    PageSetupDialog1: TPageSetupDialog;
+    PageControlMain: TPageControl;
+    TabSheetWejscie: TTabSheet;
+    TabSheetOperacje: TTabSheet;
+    TabSheetExit: TTabSheet;
     PanelMain: TPanel;
     PanelLeft: TPanel;
     DirectoryListBox1: TDirectoryListBox;
+    PanelTopPath: TPanel;
+    EditPath: TEdit;
+    ButtonStart: TButton;
     PanelRight: TPanel;
     Image1: TImage;
     PanelTop: TPanel;
-    FileListBox1: TFileListBox;
     ListView1: TListView;
+    FileListBox1: TFileListBox;
+    TabSheetStan: TTabSheet;
+    TabSheetSettings: TTabSheet;
+    TabSheetOprogramie: TTabSheet;
+    PanelPrawy: TPanel;
+    PanelLewy: TPanel;
+    RichEdit1: TRichEdit;
     procedure de(Sender: TObject);
     procedure ButtonStartClick(Sender: TObject);
     procedure ListView1Click(Sender: TObject);
@@ -35,6 +50,9 @@ type
     procedure OpenFolderClick(Sender: TObject);
     procedure FileListBox1Change(Sender: TObject);
     procedure Image1DblClick(Sender: TObject);
+    procedure Kopiuj1Click(Sender: TObject);
+    procedure Wklej1Click(Sender: TObject);
+    procedure Usu1Click(Sender: TObject);
   private
     { Private declarations }
 
@@ -102,6 +120,12 @@ begin
    FormPictureView.ShowModal;
 end;
 
+procedure TForm1.Kopiuj1Click(Sender: TObject);
+begin
+  EditPath.SelectAll;
+  EditPath.CopyToClipboard;
+end;
+
 procedure TForm1.ListView1Click(Sender: TObject);
 var
   SelectedItem: TListItem;
@@ -127,6 +151,7 @@ if ListView1.Selected <> nil then
     else
       ShowMessage('Plik nie istnieje: ' + FullPath);
   end;
+
 end;
 
 function TForm1.LoadImageToTPicture(const FileName: string;
@@ -293,6 +318,16 @@ begin
   finally
     Screen.Cursor := crDefault;
   end;
+end;
+
+procedure TForm1.Usu1Click(Sender: TObject);
+begin
+  EditPath.Clear;
+end;
+
+procedure TForm1.Wklej1Click(Sender: TObject);
+begin
+  EditPath.PasteFromClipboard;
 end;
 
 end.

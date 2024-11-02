@@ -10,18 +10,15 @@ type
   TFormPictureView = class(TForm)
     Panel1: TPanel;
     Button1: TButton;
-    ButtPlus: TButton;
-    ButtMinus: TButton;
     ScrollBox1: TScrollBox;
     ImageViewer: TImage;
+    Panel2: TPanel;
     TrackBar1: TTrackBar;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure ShowImg;
     procedure FormShow(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure ButtPlusClick(Sender: TObject);
-    procedure ButtMinusClick(Sender: TObject);
     procedure TrackBar1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure TrackBar1KeyUp(Sender: TObject; var Key: Word;
@@ -35,7 +32,6 @@ type
       Shift: TShiftState; X, Y: Integer);
   private
   ScaleFactor: Single;
-  procedure ZoomImage(Factor: Single);
     procedure SizeImagePlus;
     { Private declarations }
   public
@@ -56,20 +52,12 @@ implementation
 uses Unit1;
 
 
-procedure TFormPictureView.ButtMinusClick(Sender: TObject);
-begin
-  ZoomImage(0.8); // Pomniejsz o 20%
-end;
-
 procedure TFormPictureView.Button1Click(Sender: TObject);
 begin
   Close;
 end;
 
-procedure TFormPictureView.ButtPlusClick(Sender: TObject);
-begin
-  ZoomImage(1.2); // Powiêksz o 20%
-end;
+
 
 procedure TFormPictureView.FormCreate(Sender: TObject);
 begin
@@ -194,22 +182,5 @@ begin
   end;
 end;
 
-procedure TFormPictureView.ZoomImage(Factor: Single);
-var
-  ScaledBitmap: TBitmap;
-begin
-if OriginalBitmap.Empty then Exit; // Upewnij siê, ¿e OriginalBitmap nie jest pusty
-
-  ScaleFactor := ScaleFactor * Factor;
-  ScaledBitmap := TBitmap.Create;
-  try
-    ScaledBitmap.SetSize(Round(OriginalBitmap.Width * ScaleFactor),
-                         Round(OriginalBitmap.Height * ScaleFactor));
-    ScaledBitmap.Canvas.StretchDraw(Rect(0, 0, ScaledBitmap.Width, ScaledBitmap.Height), OriginalBitmap);
-    ImageViewer.Picture.Bitmap.Assign(ScaledBitmap); // Przypisanie powiêkszonego obrazu do ImageViewer
-  finally
-    ScaledBitmap.Free;
-  end;
-end;
 
 end.
